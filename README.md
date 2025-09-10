@@ -1,6 +1,6 @@
-# expensemate
+# ExpenseMate
 
-A new Flutter project.
+Friendly, personal finance tracker
 
 ## Getting Started
 
