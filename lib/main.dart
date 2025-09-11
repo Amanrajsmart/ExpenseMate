@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'models/transaction.dart';
+// ignore: unused_import
 import 'pages/home_page.dart';
 
 void main() async {
@@ -14,20 +15,23 @@ void main() async {
 }
 
 class ExpenseMateApp extends StatelessWidget {
+  const ExpenseMateApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "ExpenseMate",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: MainApp(),
     );
   }
 }
 
 class MainApp extends StatefulWidget {
+  const MainApp({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _MainAppState createState() => _MainAppState();
 }
 
@@ -77,20 +81,23 @@ class _MainAppState extends State<MainApp> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.list), label: "Transactions"),
+            icon: Icon(Icons.list),
+            label: "Transactions",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.category), label: "Categories"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: "Profile"),
+            icon: Icon(Icons.category),
+            label: "Categories",
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
           // Add new expense (future feature)
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Add Expense Clicked")),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text("Add Expense Clicked")));
         },
       ),
     );
@@ -101,6 +108,8 @@ class _MainAppState extends State<MainApp> {
 // SCREENS
 //
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -114,6 +123,8 @@ class HomeScreen extends StatelessWidget {
 }
 
 class TransactionsScreen extends StatelessWidget {
+  const TransactionsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -126,6 +137,8 @@ class TransactionsScreen extends StatelessWidget {
 }
 
 class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -138,6 +151,8 @@ class CategoriesScreen extends StatelessWidget {
 }
 
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -150,6 +165,8 @@ class ProfileScreen extends StatelessWidget {
 }
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
