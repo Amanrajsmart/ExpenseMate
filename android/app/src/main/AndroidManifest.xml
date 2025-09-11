@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.expensemate">
+    package="com.expensemate.expensemate">
 
     <!-- SMS Permissions -->
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -9,7 +9,7 @@
         android:label="ExpenseMate"
         android:icon="@mipmap/ic_launcher">
         <activity
-            android:name=".MainActivity"
+            android:name="${applicationName}"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
